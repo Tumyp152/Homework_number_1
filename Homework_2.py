@@ -1,10 +1,5 @@
-time_all = input("Введите нужное число секунд:  ")
-temp_int = int(time_all) % 3600
-time_hours = int(time_all) // 3600
-time_min = int(temp_int) // 60
-time_sec = int(temp_int) % 60
-if time_hours > 24:
-    print("Введённое время превышает количество времени в сутках")
-else:
-    print("Общее время: ", time_hours, ":", time_min, ":", time_sec)
-
+sec = int(input('Введите время в секундах: '))
+h = ((sec // 3600)) % 24
+m = (sec // 60) % 60
+s = sec % 60
+print('{0}:{1:=02}:{2:=02}'.format(h, m, s))
